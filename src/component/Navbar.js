@@ -1,21 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between px-10 py-4 bg-black text-white">
-      <h1 className="text-3xl font-bold">
-        <Link to="/">Inno Tech</Link>
+    <div className="flex items-center justify-between px-4 gap-1 py-4 bg-black text-white sm:px-10">
+      <h1 className="text-xl font-bold sm:text-3xl">
+        <NavLink to="/">Inno Tech</NavLink>
       </h1>
-      <ul className="flex gap-4 text-lg font-semibold">
+      <ul className="flex gap-2 text-sm font-semibold sm:text-lg sm:gap-4">
         <li>
-          <Link to="/about">About</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-gray-500" : "text-white"
+            }
+            to="/about"
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-gray-500" : "text-white"
+            }
+            to="/contact"
+          >
+            Contact
+          </NavLink>
         </li>
         <li>
-          <Link to="/messages">Messages</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-gray-500" : "text-white"
+            }
+            to="/messages"
+          >
+            Messages
+          </NavLink>
         </li>
       </ul>
     </div>
