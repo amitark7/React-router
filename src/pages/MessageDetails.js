@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import messageJson from "../JsonData/messageJson.json";
 
 const MessageDetails = () => {
   const { messages } = messageJson;
   const { id } = useParams();
-  const messageData = messages.find((msg) => msg.id === id);
+  const [messageData, setMessageData] = useState(null);
+  useEffect(() => {
+    setMessageData(messages.find((msg) => msg.id === id));
+  }, []);
   return (
     <div className="h-screen text-center text-black p-10">
       {messageData ? (
