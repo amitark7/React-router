@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { messages } from "../JsonData/messages";
+import MessageJson from "../JsonData/MessageJson.json";
 
 const Messages = () => {
+  const { messages } = MessageJson;
   return (
     <div className="bg-blue-400 text-center h-screen text-white p-10">
       {messages.map((msg) => {

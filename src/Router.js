@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Contact from "./Contact";
-import About from "./About";
-import Messages from "./Messages";
-import MessageDetails from "./MessageDetails";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Messages from "./pages/Messages";
+import MessageDetails from "./pages/MessageDetails";
 
 const Router = () => {
   return (
