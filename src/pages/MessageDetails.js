@@ -4,7 +4,6 @@ import MessageJson from "../JsonData/MessageJson.json";
 
 const MessageDetails = () => {
   const { messages } = MessageJson;
-  console.log(messages);
   const { id } = useParams();
   const messageData = messages.find((msg) => msg.id === id);
   return (
