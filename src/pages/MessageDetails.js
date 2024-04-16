@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import MessageJson from "../JsonData/MessageJson.json";
+import MessageJson from "../JsonData/messageJson.json";
 
 const MessageDetails = () => {
   const { messages } = MessageJson;
@@ -14,9 +14,7 @@ const MessageDetails = () => {
           <p className="mt-6 text-xl">{messageData.messages}</p>
         </>
       ) : (
-        <p className="text-3xl font-semibold">
-          Seems like you are on wrong route.
-        </p>
+        <p className="text-3xl font-semibold">404 Not Found</p>
       )}
     </div>
   );

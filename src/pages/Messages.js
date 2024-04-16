@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MessageJson from "../JsonData/MessageJson.json";
+import MessageJson from "../JsonData/messageJson.json";
 
 const Messages = () => {
   const { messages } = MessageJson;
