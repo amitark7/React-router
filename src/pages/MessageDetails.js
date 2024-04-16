@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import MessageJson from "../JsonData/messageJson.json";
+import messageJson from "../JsonData/messageJson.json";
 
 const MessageDetails = () => {
-  const { messages } = MessageJson;
+  const { messages } = messageJson;
   const { id } = useParams();
   const messageData = messages.find((msg) => msg.id === id);
   return (
