@@ -13,7 +13,7 @@ const Messages = () => {
     {
       id: 3,
       title: "Messages 3",
-      messages: "Thanks for Visit this site.Visit Again",
+      messages: "Thanks for Visit this site. Visit Again",
     },
   ];
   return (
@@ -22,14 +22,14 @@ const Messages = () => {
         return (
           <div
             key={msg.id}
-            className="w-5/12 border mx-auto border-gray-600 p-2 text-left"
+            className="w-5/12 border mx-auto border-gray-600 p-2 text-left cursor-pointer"
           >
             <Link
               to={{
                 pathname: `/messages/${msg.id}`,
               }}
               state={{ message: msg }}
-              className="text-lg cursor-pointer"
+              className="text-base sm:text-lg"
             >
               {msg.title}
             </Link>
